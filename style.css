@@ -125,3 +125,12 @@
   .task-stats .tasks-completed span {
     background-color: #03A9F4;
   }
+  @media (max-width:768px){
+  .todo-container{
+min-width: 100%;
+}
+.task-stats{
+  flex-direction: column;
+  gap: 10px;
+}
+  }

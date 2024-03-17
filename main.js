@@ -66,8 +66,6 @@ document.addEventListener("click", function (e) {
     if (tasksContainer.childElementCount == 0) {
       createNoTasksMsg();
     }
-     // Save tasks to localStorage
-    saveTasksToLocalStorage();
   }
   //remove All tasks
   if (e.target.classList.contains("deleteall")) {
@@ -82,7 +80,9 @@ document.addEventListener("click", function (e) {
     } else {
       taskBoxes.forEach(function (taskBox) {
         taskBox.remove();
+        
       });
+      createNoTasksMsg()
     }
   }
   //Finished All tasks
